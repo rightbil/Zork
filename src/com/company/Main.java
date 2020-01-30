@@ -1,22 +1,20 @@
 package com.company;
-
 import java.util.*;
-
 public class Main {
 
     public static final String ANSI_CLS = "\u001b[2J";
     public static final String ANSI_HOME = "\u001b[H";
     public static StringBuilder roomContents = new StringBuilder(" room.\nContents in this castle room : ");
-    public static String introPhrase = "Now,you are in the ";
+    public static String introPhrase = "Now, you are in the ";
     public static Set<String> nextRooms = new LinkedHashSet<>(); // Order is important
     public static Map<String, Set<String>> rooms = new HashMap<>();
     public static Scanner sc = new Scanner(System.in);
-    public static String d = null;
+    public static String userInput = null;
     public static String quit = "C";
     public static Set<String> visitedRooms = new LinkedHashSet<>();
     public static String visitorName;
-    public static Date vistitDate;
-    public static Map<String, Double> rating = new HashMap<>();
+    public static Date visitDate;
+    public static Map<String, Double> roomRating = new HashMap<>();
     public static boolean isSecretRoomVisited = false;
     public static void Print(Object msgToUser) {
         System.out.println(msgToUser);
@@ -34,8 +32,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("Q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -45,7 +43,7 @@ public class Main {
                 break;
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "N":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Foyer", sc.nextDouble());
@@ -55,7 +53,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         Foyer();
 
                 }// end of switch
@@ -72,8 +70,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -84,7 +82,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "S":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Front", sc.nextDouble());
@@ -106,7 +104,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         FrontRoom();
 
                 }// end of switch
@@ -121,8 +119,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -133,7 +131,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "E":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Library", sc.nextDouble());
@@ -149,7 +147,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         Library();
 
                 }// end of switch
@@ -165,8 +163,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -177,7 +175,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "N":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Kitchen", sc.nextDouble());
@@ -193,7 +191,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         Kitchen();
 
                 }// end of switch
@@ -208,8 +206,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -220,7 +218,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "S":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Dining", sc.nextDouble());
@@ -230,7 +228,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         DiningRoom();
 
                 }// end of switch
@@ -245,8 +243,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -257,7 +255,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
 
                     case "E":
                         if (isSecretRoomVisited == false) {
@@ -288,7 +286,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         Valute();
 
                 }// end of switch
@@ -304,8 +302,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 if (!isSecretRoomVisited) {
                     Print("Sorry to see you leave, have a nice day");
@@ -316,7 +314,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "W":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Parlor", sc.nextDouble());
@@ -332,7 +330,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         Parlor();
 
                 }// end of switch
@@ -348,8 +346,8 @@ public class Main {
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
-            d = sc.next();
-            if (d.equalsIgnoreCase("Q")) {
+            userInput = sc.next();
+            if (userInput.equalsIgnoreCase("Q")) {
                 // user wanted to quit
                 Print("you have finished visiting the rooms.");
                 VisitedRooms();
@@ -358,7 +356,7 @@ public class Main {
 
             }// end of if
             else {
-                switch (d.toUpperCase()) {
+                switch (userInput.toUpperCase()) {
                     case "W":
                         System.out.printf("would you rate the room ? ");
                         SetRating("Secret", sc.nextDouble());
@@ -368,7 +366,7 @@ public class Main {
                     default:
                         //TODO: System.out.println(ANSI_CLS + ANSI_HOME);
                         //TODO: System.out.flush();
-                        Print("'" + d + "'" + " is not a valid direction , please try again.");
+                        Print("'" + userInput + "'" + " is not a valid direction , please try again.");
                         SecretRoom();
 
                 }// end of switch
@@ -459,7 +457,7 @@ public class Main {
     }
 
     public static String VisitSummary() {
-        String visitSummary = vistitDate + visitorName + " , you visited " + visitedRooms.size() + " rooms : " + VisitedRooms() + " over all rate was " + yourRating();
+        String visitSummary = visitDate + visitorName + " , you visited " + visitedRooms.size() + " rooms : " + VisitedRooms() + " over all rate was " + yourRating();
         if (isFollowedByGhost()) {
             visitSummary += " just reminder a ghost is following you.";
         }
@@ -468,33 +466,33 @@ public class Main {
     }
 
     public static void SetRating(String room, double rate) {
-        rating.put(room, rate);
+        roomRating.put(room, rate);
     }
 
     public static double yourRating() {
         double sum = 0.0;
         double rate;
-        for (Map.Entry<String, Double> str : rating.entrySet()) {
+        for (Map.Entry<String, Double> str : roomRating.entrySet()) {
             sum = sum + str.getValue();
         }
 
-        rate = sum / rating.size();
+        rate = sum / roomRating.size();
         return rate;
     }
 
     public static void main(String[] args) {
-        visitorName = " \n Dear Guest";
-        vistitDate = new Date();
-        //visitedRooms.size();
-        Foyer();
-        // write your code here
-        //Get the direction input where the user wants to go
-        //Show what is in that room and give them what possible direction the can go from there
-        //Users can move back and forth
-        //You program should allow the user to find the secret room only 25% of the time.
-        //However, once they find the secret room they can always find it.
-        //When the user exits the house or quits there is a 25% chance they will be followed by a ghost. Let them know when they are being followed.
-        //Also let the user know how many rooms they visited after they exit or quit.
+        System.out.println("Visitor name , please");
+        visitorName = "\n Dear " + sc.next();
+        visitDate = new Date();
+         Foyer();
+        /*Ask users to enter the direction where they want to go {N,S,E,W}
+        Show the content in the room and give them what possible direction the can go from there
+        Users can move back and forth
+        Your program should allow the user to find the secret room only 25% of the time.
+        However, once they find the secret room they can always find it.
+        When the user exits the house or quits there is a 25% chance they will be followed by a ghost. Let them know when they are being followed.
+        Also let the user know how many rooms they visited after they exit or quit.
+       */
         Print(VisitSummary());
 
     }
