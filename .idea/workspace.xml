@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27e015e1-c72e-4ebe-8fce-bd1f10705dab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Zork/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Zork/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
@@ -26,6 +25,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -62,25 +62,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1225" height="149" key="GridCell.Tab.0.bottom" timestamp="1580357690126">
+    <state width="1225" height="149" key="GridCell.Tab.0.bottom" timestamp="1580385527773">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="149" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580357690126" />
-    <state width="1225" height="149" key="GridCell.Tab.0.center" timestamp="1580357690125">
+    <state width="1225" height="149" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580385527773" />
+    <state width="1225" height="149" key="GridCell.Tab.0.center" timestamp="1580385527773">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="149" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580357690125" />
-    <state width="1225" height="149" key="GridCell.Tab.0.left" timestamp="1580357690125">
+    <state width="1225" height="149" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580385527773" />
+    <state width="1225" height="149" key="GridCell.Tab.0.left" timestamp="1580385527773">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="149" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580357690125" />
-    <state width="1225" height="149" key="GridCell.Tab.0.right" timestamp="1580357690126">
+    <state width="1225" height="149" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580385527773" />
+    <state width="1225" height="149" key="GridCell.Tab.0.right" timestamp="1580385527773">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="149" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580357690126" />
-    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup" timestamp="1580357772270">
+    <state width="1225" height="149" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580385527773" />
+    <state x="272" y="124" key="com.intellij.ide.util.TipDialog" timestamp="1580384897408">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1580357772270" />
+    <state x="272" y="124" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1580384897408" />
+    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup" timestamp="1580386190025">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1580386190025" />
   </component>
 </project>

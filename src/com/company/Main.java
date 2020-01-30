@@ -131,7 +131,7 @@ public class Main {
     //TODO: Kitchen #4
     public static void Kitchen() {
 
-        Print(introPhrase+ "Front " + roomContents + " dead scorpion");
+        Print(introPhrase+ "Kitchen" + roomContents + " bats");
         Print(PossibleDirections("Kitchen"));
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
@@ -166,7 +166,7 @@ public class Main {
     }
 //TODO: Dining Room #5
     public static void DiningRoom() {
-        Print(introPhrase+ "Front " + roomContents + " dead scorpion");
+        Print(introPhrase+ "Dining" + roomContents + " dust empty box");
         Print(PossibleDirections("Dining"));
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
@@ -197,7 +197,7 @@ public class Main {
     }
 //TODO: Valute #6
     public static void Valute() {
-        Print(introPhrase+ "Front " + roomContents + " dead scorpion");
+        Print(introPhrase+ "Valute" + roomContents + " 3 walking skeletorn");
         Print(PossibleDirections("Valute"));
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
@@ -214,7 +214,8 @@ public class Main {
                 switch (d.toUpperCase()) {
 
                     case "E":
-                        if (new Random(1).nextInt(4) == 1) {
+                        if (new Random().nextInt(4) == 0) {
+
                             SecretRoom();
                         } else {
 
@@ -232,10 +233,11 @@ public class Main {
             }
         }// end of while loop
     }
-//TODO: Parol #7
+//TODO: Parlor #7
     public static void Parlor() {
-        Print(introPhrase+ "Front " + roomContents + " dead scorpion");
-        Print(PossibleDirections("Parol"));
+
+        Print(introPhrase+ "Parol" + roomContents + " treasure chest");
+        Print(PossibleDirections("Parlor"));
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
             Print("Enter directions or press Q to quit");
@@ -269,7 +271,7 @@ public class Main {
     }
 //TODO: SecretRoom #8
     public static void SecretRoom() {
-        Print(introPhrase+ "Front " + roomContents + " dead scorpion");
+        Print(introPhrase+ "Secret" + roomContents + " piles of gold");
         Print(PossibleDirections("Secret"));
         while (!quit.equalsIgnoreCase("q")) {
             //System.out.println(ANSI_CLS);
@@ -320,9 +322,6 @@ public class Main {
         nextExit = new LinkedHashSet<>(
                 Arrays.asList("S1","W3","E4")
         );
-//        nextExit.add("S1");
-//        nextExit.add("W3");
-//        nextExit.add("E4");
         rooms.put("Front", nextExit);
 
         //room 3
@@ -385,7 +384,7 @@ public class Main {
     public static void main(String[] args) {
         Foyer();
         // write your code here
-        //get the input where the user wants to go
+        //Get the direction input where the user wants to go
         //Show what is in that room and give them what possible direction the can go from there
         //Users can move back and forth
         //You program should allow the user to find the secret room only 25% of the time.
